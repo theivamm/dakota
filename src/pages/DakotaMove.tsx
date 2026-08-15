@@ -249,15 +249,6 @@ function GraphicLanguageSection() {
               loading="lazy"
             />
             <TrajectoryLines color="lime" className={styles.graphicTrajectories} />
-            {graphicLanguage.labels.map((label, index) => (
-              <span
-                key={label}
-                className={`type-meta ${styles.graphicTag}`}
-                style={{ top: `${12 + index * 16}%`, left: index % 2 === 0 ? '6%' : '56%' }}
-              >
-                {label}
-              </span>
-            ))}
             <span className={styles.graphicDot} aria-hidden="true" />
           </div>
         </div>

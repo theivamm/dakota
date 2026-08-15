@@ -288,16 +288,6 @@
   opacity: 0.5;
 }
 
-.graphicTag {
-  position: absolute;
-  z-index: 2;
-  color: var(--move-white);
-  background-color: rgb(7 27 43 / 72%);
-  border: 1px solid rgb(200 242 61 / 35%);
-  border-radius: 999px;
-  padding: 0.25rem 0.75rem;
-}
-
 .graphicDot {
   position: absolute;
   z-index: 2;

@@ -1,0 +1,25 @@
+/* Tema Dakota Move — aplicado al contenedor raíz de /dakota-move */
+[data-theme='move'] {
+  --move-blue: #82b9d9;
+  --move-navy: #10283a;
+  --move-navy-deep: #071b2b;
+  --move-coral: #f04444;
+  --move-lime: #c8f23d;
+  --move-orange: #ea580c;
+  --move-white: #ffffff;
+  --move-mist: #eef3f5;
+
+  --surface: #071b2b;
+  --surface-soft: #10283a;
+  --text-primary: #ffffff;
+  --text-secondary: #bdcbd4;
+  --border: rgb(130 185 217 / 22%);
+  --focus-ring: #c8f23d;
+
+  --cta-bg: #c8f23d;
+  --cta-fg: #071b2b;
+  --cta-bg-hover: #d8f56e;
+
+  background-color: var(--surface);
+  color: var(--text-primary);
+}

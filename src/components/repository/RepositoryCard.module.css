@@ -1,0 +1,101 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1.75rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  background-color: var(--surface);
+  transition:
+    transform var(--motion-base) var(--ease-out),
+    box-shadow var(--motion-base) var(--ease-out),
+    border-color var(--motion-base) var(--ease-out);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 40px rgb(7 27 43 / 10%);
+    border-color: var(--dakota-blue);
+  }
+}
+
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--text-secondary);
+}
+
+.icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+}
+
+.blue {
+  background-color: rgb(130 185 217 / 18%);
+  color: var(--dakota-blue-dark);
+}
+
+.coral {
+  background-color: rgb(240 68 68 / 12%);
+  color: var(--move-coral);
+}
+
+.lime {
+  background-color: rgb(200 242 61 / 16%);
+  color: #6a7f00;
+}
+
+.description {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.preview {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  min-height: 2.75rem;
+  margin-top: auto;
+}
+
+.previewBar {
+  flex: 1;
+  height: 6px;
+  border-radius: var(--radius-full);
+  opacity: 0.35;
+}
+
+.preview-blue {
+  background-color: var(--dakota-mist);
+  color: var(--dakota-blue-dark);
+}
+
+.preview-blue .previewBar {
+  background: linear-gradient(90deg, var(--dakota-blue-dark), var(--dakota-blue));
+}
+
+.preview-coral {
+  background-color: rgb(240 68 68 / 8%);
+  color: var(--move-coral);
+}
+
+.preview-coral .previewBar {
+  background: linear-gradient(90deg, var(--move-coral), #f7a0a0);
+}
+
+.preview-lime {
+  background-color: rgb(200 242 61 / 12%);
+  color: #6a7f00;
+}
+
+.preview-lime .previewBar {
+  background: linear-gradient(90deg, #6a7f00, var(--move-lime));
+}

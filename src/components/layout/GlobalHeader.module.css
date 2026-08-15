@@ -1,0 +1,143 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  width: 100%;
+}
+
+.home {
+  background-color: rgb(238 243 245 / 88%);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 1px 12px rgb(23 33 43 / 4%);
+}
+
+.move {
+  background-color: transparent;
+  border-bottom: 1px solid transparent;
+  transition:
+    background-color var(--motion-base) var(--ease-out),
+    border-color var(--motion-base) var(--ease-out);
+}
+
+.move.scrolled {
+  background-color: rgb(7 27 43 / 92%);
+  backdrop-filter: blur(10px);
+  border-bottom-color: var(--border);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 68px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navList {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.navLink {
+  font-weight: 600;
+  font-size: 0.9375rem;
+  color: var(--text-primary);
+  position: relative;
+  padding-block: 0.5rem;
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 100%;
+  bottom: 0.25rem;
+  height: 2px;
+  background-color: var(--move-coral);
+  transition: right var(--motion-base) var(--ease-out);
+}
+
+.navLink:hover::after {
+  right: 0;
+}
+
+.move .navLink {
+  color: var(--move-white);
+}
+
+.menuButton {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+}
+
+.move .menuButton {
+  color: var(--move-white);
+}
+
+.panel {
+  border-top: 1px solid var(--border);
+  background-color: var(--surface);
+  padding-block: 1.25rem 1.75rem;
+  animation: panel-in var(--motion-fast) var(--ease-out);
+}
+
+.move .panel {
+  background-color: var(--move-navy-deep);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.mobileNav .navList {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.25rem;
+}
+
+.mobileNav .navLink {
+  display: block;
+  padding-block: 0.5rem;
+  font-size: 1.0625rem;
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .panel {
+    animation: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .nav {
+    display: none;
+  }
+  .menuButton {
+    display: grid;
+    place-items: center;
+  }
+}

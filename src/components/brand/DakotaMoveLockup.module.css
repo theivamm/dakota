@@ -1,0 +1,26 @@
+.link {
+  display: inline-block;
+}
+
+.lockup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.descriptor {
+  font-family: var(--font-brand);
+  font-weight: 800;
+  font-size: 0.875rem;
+  letter-spacing: 0.28em;
+  color: var(--move-coral);
+  padding-left: 0.75rem;
+  border-left: 1px solid rgb(240 68 68 / 45%);
+  line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .descriptor {
+    font-size: 0.75rem;
+  }
+}

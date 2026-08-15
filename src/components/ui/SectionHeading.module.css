@@ -1,0 +1,43 @@
+.heading {
+  display: grid;
+  gap: 1rem;
+  max-width: 46rem;
+}
+
+.heading .description {
+  font-size: var(--text-body);
+  color: var(--text-secondary);
+  max-width: 38rem;
+}
+
+.center {
+  margin-inline: auto;
+  text-align: center;
+  justify-items: center;
+}
+
+.center .description {
+  margin-inline: auto;
+}
+
+.action {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 0.9375rem;
+  color: var(--dakota-blue-dark);
+  width: fit-content;
+}
+
+.action svg {
+  transition: transform var(--motion-base) var(--ease-out);
+}
+
+.action:hover svg {
+  transform: translateX(4px);
+}
+
+[data-theme='move'] .action {
+  color: var(--move-blue);
+}

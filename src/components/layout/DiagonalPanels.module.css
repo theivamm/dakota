@@ -1,0 +1,61 @@
+.panels {
+  position: relative;
+  width: 100%;
+  height: clamp(280px, 40vw, 460px);
+  overflow: hidden;
+  background-color: var(--move-navy-deep);
+}
+
+.panel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+}
+
+.panel img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: auto !important;
+}
+
+.panel[data-panel='run'] {
+  left: 0;
+  width: 62%;
+  clip-path: polygon(0 0, 62% 0, 40% 100%, 0 100%);
+  z-index: 3;
+}
+
+.panel[data-panel='bike'] {
+  left: 22%;
+  width: 56%;
+  clip-path: polygon(38% 0, 78% 0, 58% 100%, 20% 100%);
+  z-index: 2;
+}
+
+.panel[data-panel='trail'] {
+  left: 44%;
+  width: 56%;
+  clip-path: polygon(56% 0, 100% 0, 100% 100%, 76% 100%);
+  z-index: 1;
+}
+
+.tag {
+  position: absolute;
+  left: 0.75rem;
+  bottom: 0.75rem;
+  z-index: 1;
+  padding: 0.3rem 0.625rem;
+  border-radius: var(--radius-sm);
+  background-color: rgb(7 27 43 / 78%);
+  color: var(--move-blue);
+  font-size: 0.625rem;
+}
+
+.panel[data-panel='trail'] .tag {
+  right: 0.75rem;
+  left: auto;
+}

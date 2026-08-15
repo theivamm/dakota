@@ -32,6 +32,8 @@
 .heroTitle {
   display: grid;
   gap: 0.35rem;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .line {
@@ -209,6 +211,10 @@
 }
 
 @media (max-width: 767px) {
+  .hero .heroTitle {
+    font-size: clamp(2.5rem, 11vw, 3.25rem);
+  }
+
   .pillarGrid {
     grid-template-columns: 1fr;
   }

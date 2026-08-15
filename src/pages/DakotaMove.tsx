@@ -5,7 +5,6 @@ import { TrajectoryLines } from '@/components/ui/TrajectoryLines'
 import { SectionHeading } from '@/components/ui/SectionHeading'
 import { Button } from '@/components/ui/Button'
 import { Icon } from '@/components/ui/Icon'
-import { MediaImage } from '@/components/ui/MediaImage'
 import { StatusTag } from '@/components/ui/StatusTag'
 import { ColorSwatch } from '@/components/repository/ColorSwatch'
 import { TypographySpecimen } from '@/components/repository/TypographySpecimen'
@@ -103,21 +102,6 @@ function Hero() {
                 loading="eager"
                 decoding="async"
               />
-            </div>
-            <div className={styles.heroThumbs}>
-              {moveUniverse.heroMedia.slice(1).map((media) => (
-                <MediaImage
-                  key={media.id}
-                  media={{
-                    alt: `Composición conceptual — ${media.label}`,
-                    label: media.label,
-                    detail: media.detail,
-                    tone: 'navy',
-                  }}
-                  width={300}
-                  height={200}
-                />
-              ))}
             </div>
           </div>
         </div>

@@ -212,7 +212,7 @@
 
 @media (max-width: 767px) {
   .hero .heroTitle {
-    font-size: clamp(2.5rem, 11vw, 3.25rem);
+    font-size: clamp(2rem, 8.5vw, 3rem);
   }
 
   .pillarGrid {

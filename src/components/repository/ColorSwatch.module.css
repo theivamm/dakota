@@ -41,62 +41,9 @@
   margin-top: 0.25rem;
 }
 
-.body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding-inline: 1.25rem;
-  padding-bottom: 1.25rem;
-}
-
 .role {
   color: var(--text-secondary);
   font-size: 0.9375rem;
-}
-
-.toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-size: 0.875rem;
-  color: var(--dakota-blue-dark);
-  width: fit-content;
-}
-
-[data-theme='move'] .toggle {
-  color: var(--move-blue);
-}
-
-.example {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 0;
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition:
-    height var(--motion-base) var(--ease-out),
-    opacity var(--motion-base) var(--ease-out),
-    padding var(--motion-base) var(--ease-out);
-}
-
-.exampleOpen {
-  height: auto;
-  opacity: 1;
-  padding: 0 1.25rem 1.25rem;
-}
-
-.exampleBar {
-  width: 56px;
-  height: 12px;
-  border-radius: var(--radius-full);
-  border: 1px solid rgb(255 255 255 / 40%);
-}
-
-.exampleLabel {
-  color: var(--text-secondary);
-  font-size: 0.6875rem;
+  padding-inline: 1.25rem;
+  padding-bottom: 1.25rem;
 }

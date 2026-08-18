@@ -1,5 +1,3 @@
-import { useState } from 'react'
-import { Icon } from '@/components/ui/Icon'
 import styles from './ColorSwatch.module.css'
 
 type ColorSwatchProps = {
@@ -19,9 +17,7 @@ function textOn(hex: string): string {
 }
 
 export function ColorSwatch({ name, hex, role, index }: ColorSwatchProps) {
-  const [open, setOpen] = useState(false)
   const ink = textOn(hex)
-  const exampleId = `color-example-${index}`
 
   return (
     <article className={styles.card} data-testid="color-swatch">
@@ -39,24 +35,7 @@ export function ColorSwatch({ name, hex, role, index }: ColorSwatchProps) {
         </div>
       </div>
 
-      <div className={styles.body}>
-        <p className={styles.role}>{role}</p>
-        <button
-          type="button"
-          className={styles.toggle}
-          aria-expanded={open}
-          aria-controls={exampleId}
-          onClick={() => setOpen((value) => !value)}
-        >
-          {open ? 'Ocultar aplicación' : 'Ver aplicación'}
-          <Icon name={open ? 'close' : 'spark'} size={14} />
-        </button>
-      </div>
-
-      <div id={exampleId} className={`${styles.example} ${open ? styles.exampleOpen : ''}`.trim()}>
-        <div className={styles.exampleBar} style={{ backgroundColor: hex }} />
-        <span className={`type-meta ${styles.exampleLabel}`}>Aplicación de ejemplo</span>
-      </div>
+      <p className={styles.role}>{role}</p>
     </article>
   )
 }
